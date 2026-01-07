@@ -1,11 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello Mars</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collab YW | Registration</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="brand">Collab YW</div>
+        <h1>Create your account</h1>
+        <p>
+          Clean, secure registration for teams who want to collaborate without
+          friction.
+        </p>
+        <div class="meta">
+          <span class="chip">2-minute setup</span>
+          <span class="chip">Work email ready</span>
+          <span class="chip">Privacy first</span>
+        </div>
+      </header>
+
+      <main class="card">
+        <form id="registrationForm" class="form" novalidate>
+          <div class="field">
+            <label for="fullName">Full name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              autocomplete="name"
+              placeholder="Jordan Lee"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              placeholder="jordan@studio.com"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="team"
+              >Team name <span class="optional">(optional)</span></label
+            >
+            <input
+              type="text"
+              id="team"
+              name="team"
+              autocomplete="organization"
+              placeholder="Studio Atlas"
+            />
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="new-password"
+              placeholder="Minimum 8 characters"
+              minlength="8"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="confirmPassword">Confirm password</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              autocomplete="new-password"
+              placeholder="Re-enter password"
+              minlength="8"
+              required
+            />
+          </div>
+
+          <div class="field checkbox-field">
+            <label class="checkbox">
+              <input type="checkbox" id="terms" name="terms" required />
+              <span>I agree to the Terms and Privacy Policy</span>
+            </label>
+          </div>
+
+          <button class="button" type="submit">Create account</button>
+          <p
+            id="formMessage"
+            class="form-message"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+          <p class="form-footer">
+            Already have an account? <a href="#">Sign in</a>
+          </p>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
